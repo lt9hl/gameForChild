@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:text="Выбери в ответе подходящую тень:"
+            android:textAlignment="center"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/colorImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/firstShadow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="firstShadowButton"/>
+
+            <ImageView
+                android:id="@+id/secondShadow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="secondShadowButton"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/thirdShadow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="thirdShadowButton"/>
+
+                <ImageView
+                    android:id="@+id/fourthShadow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="7dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="fourthShadowButton"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:text="ЗАКОНЧИТЬ ИГРУ"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="15dp"
+            android:onClick="stopGame"
+            />
+
+        <Button
+            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="ПРОПУСТИТЬ"
+            android:textSize="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="skipLevel"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
