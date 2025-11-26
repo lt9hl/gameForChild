@@ -82,16 +82,16 @@ class GameActivity : AppCompatActivity() {
 
     fun nextLevel(){
         try{
-            if (colorImages.count() > 5 )
+            if (colorImages.count() > 2 )
                 currentColorImage = colorImages.random()
             else{
                 var alert = AlertDialog.Builder(this)
                 alert.setTitle("Игра окончена")
                 alert.setMessage("Хотите начать заново?")
-                alert.setPositiveButton("Да") { dialog, which ->
-                    startNewGame()
+                alert.setPositiveButton("Да") {
+                        _, _ -> startNewGame()
                 }
-                alert.setNegativeButton("Нет") { dialog, which ->
+                alert.setNegativeButton("Нет") {_,_ ->
                     stopGame()
                 }
                 alert.show()
@@ -106,7 +106,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun startNewGame(){
-        colorImages = randomImages
+        colorImages.clear()
+        colorImages.addAll(randomImages)
         nextLevel()
     }
     fun setRandomShadowImages(){
